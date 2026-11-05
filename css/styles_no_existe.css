@@ -1,0 +1,21 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.error img{
+    width: 5rem;
+    height: auto;
+}
+
+.error p {
+    font-size: 1.5rem;
+}
+
+

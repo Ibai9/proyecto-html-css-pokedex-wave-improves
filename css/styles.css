@@ -1,0 +1,320 @@
+body {
+    background-color: var(--color-fondo);
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* encima del pokedex y la imagen de pokedex con esto dejo un espacio arriba y abajo */
+nav {
+    margin: 1rem 0;
+}
+
+nav a{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: flex-start; */
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav img {
+    width: 4rem;
+    height: auto;
+}
+
+/* para alinear con la imagen de la pokemon con el texto que pone Pokédex */
+nav h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.6rem;
+}
+
+/* Preguntar/Mirar esto, lo que hace es en todo lo alto del main dividir cada 1rem el shadow
+y luego solo coje el primero con el no-repeat.   */
+
+/* en todo el 100% del reparte el gradiente 1rem y con el no-repeat solo coje el primero. Con el
+padding top deja un espacio para que haya un espacio con el buscador */
+
+main {
+    background-image: linear-gradient(to bottom, var(--color-degradado), transparent);
+    background-size: 100% 1rem;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+}
+
+/* deja espacio vertical por el buscador, para que este tenga espacio */
+.main_main {
+    /* display: grid; */
+    margin: 1rem 0;
+}
+
+/* Buscador la parte de relative para luego meter el icono de la lupa dentro del buscador */
+
+.buscador {
+    position: relative;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+}
+
+.buscador input {
+    background-color: var(--color-buscador);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-borde);
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+    padding-left: 2.5rem;
+}
+
+/* esto y lo de arriba es para que el buscador este la imagen dentro del buscador, y con los padding
+y margin left se hace que el place holder de mueva a la izquierda y metes ahi la imagen de buscador */
+
+.buscador button {
+    position: absolute;
+    top: 1rem;
+    left: 0.75rem;
+    width: 2.5rem;
+    height: 3rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.buscador button img {
+    width: 1rem;
+    height: auto;
+}
+
+/* main article {
+    margin: 2rem;
+} */
+
+.tipo_hierva {
+    background-color: var(--color-grass);
+}
+
+.tipo_fuego {
+    background-color: var(--color-fire);
+}
+
+/* para que la informacion/elementos que estan dentro del articulo esten ordenados en una columna */
+article{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+/* esto es la informacion de arriba tanto el nombre del pokemon como el numero ID que estaren divididos 
+cada uno en lado por eso el space-between */
+article .info_general{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+/* article .info_general:first-child{
+    margin-left: 1rem;
+} */
+
+article .info_general h2{
+    color: var(--color-tarjeta);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+article .info_general p{
+    color: var(--color-numero);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+article .imagen_pokemon {
+    position: relative;
+    align-self: center;
+    height: 15rem;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: -6rem;
+}
+
+/* esto es para el cuadrado donde va la informacion del pokemon tanto peso, altura... el fondo blanco */
+article .informacion {
+    background-color: var(--color-tarjeta);
+    margin: 1rem;
+    padding-top: 6rem;
+    border-radius: 2rem;
+}
+
+/* esto es para las imagenes que estan de tipo de pokemons esten separados y centraus */
+article .tipo {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+article .tipo div{
+    align-items: center;
+    height: 1.3rem;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+article .tipo .caja_de_grass{
+    background-color: var(--color-grass);
+}
+
+article .tipo .caja_de_poison{
+    background-color: var(--color-poison);
+}
+
+article .tipo .caja_de_fire{
+    background-color: var(--color-fire);
+}
+
+article .tipo .caja_de_flying{
+    background-color: var(--color-flying);
+}
+
+article .tipo img{
+    width: 1rem;
+    height: auto;
+}
+
+article .tipo p{
+    color: var(--color-tarjeta);
+    margin-top: 0.9rem;
+}
+
+/* article .tipo .caja_de_poison p{
+    background-color: black;
+} */
+
+hr {
+    background-color: var(--color-texto);
+}
+
+article .peso_altura {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+article .peso_altura > img{
+    height: 2rem;
+    width: auto;
+    overflow: hidden;
+}
+
+article .peso_altura .datos_peso_altura {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+article .peso_altura .barra_separacion_peso_altura {
+    border: 0.1rem solid var(--color-borde);
+    height: 2rem;
+    margin: 0 1rem;
+}
+
+article .estadisticas {
+    display: flex;
+    flex-direction: column;
+}
+
+article .estadisticas div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+article .estadisticas div label {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+article .estadisticas div p {
+    color: var(--color-borde);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+article .estadisticas div progress {
+    width: 100%;
+    margin-right: 1.5rem;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+}
+
+/* Pregunta, esto de la barra para el fondo y el color de la barra hay que poner si o si asi? */
+
+article .estadisticas div progress::-webkit-progress-bar {
+    background-color: var(--color-barra-fondo);
+    border-radius: 0.5rem;
+}
+
+article .estadisticas div progress::-webkit-progress-value {
+    background-color: var(--color-barra-valor);
+    border-radius: 0.5rem;
+}
+
+article .estadisticas div progress::-moz-progress-bar {
+    background-color: var(--color-barra-valor);
+    border-radius: 0.5rem;
+}
+
+footer {
+    background-color: var(--color-barra-valor);
+    color: var(--color-tarjeta);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* @media(min-width: 1240px) {
+    .main_main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .buscador {
+        margin-left: 14rem;
+        margin-right: 14rem;
+    }
+
+    .main_main {
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+} */
+
+/* @media(min-width: 1870px) {
+    .main_main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .buscador {
+        margin-left: 28rem;
+        margin-right: 28rem;
+    }
+
+    .main_main {
+        margin-left: 14rem;
+        margin-right: 14rem;
+    }
+} */
